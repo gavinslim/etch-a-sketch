@@ -1,28 +1,57 @@
 const max_size = 640;
 var num_cubes;
 var curr_color = '#000000';
-let is_drawing = false;
-let black_color = true;
+let started = false;
+let black = true;
 
-const inc_color = (color) => {
+let gradient = ['#FE2712', '#FC500A', '#FB9902', '#FCCC1A',
+                '#FEFE33', '#B2D732', '#66B032', '#347C98',
+                '#0247FE', '#4424D6', '#8601AF', '#C21460']
+var gradient_idx = 0;
+
+const inc_color = () => {
+    // var hex = parseInt(color.slice(1), 16) + 1;
+    // console.log(hex);
+    // return '#' + hex.toString(16);
+
+    // let color_arr = color.slice(
+    //     color.indexOf("(") + 1, 
+    //     color.indexOf(")")
+    // ).split(",");
+
+    // let R = color_arr[0];
+    // let G = color_arr[1];
+    // let B = color_arr[2];
+    // console.log(gradient_idx, gradient[gradient_idx], gradient.length);
+    
+    let color = gradient[gradient_idx];
+    if (gradient_idx == gradient.length) {
+        gradient_idx = 0;
+    } else {
+        gradient_idx++;
+    }
+
     return color;
 }
 
 // Initiate drawing when mouse pressed
 function mouse_down() {
-    is_drawing = true;
+    started = true;
 }
 
 // Change background color of cube
 function mouse_move(e) {
-    if (is_drawing) {
+    if (started) {
+        if (black == false) {
+            curr_color = inc_color(curr_color);
+        }
         this.style.setProperty('background-color', curr_color);
     }
 }
 
 // Disable drawing when mouse released
 function mouse_up() {
-    is_drawing = false;
+    started = false;
 }
 
 function update() {
@@ -67,13 +96,13 @@ retry.addEventListener('click', update, false);
 // Init color toggle button
 const color = document.getElementById('color-toggle');
 color.addEventListener('click', e => {
-    if (black_color == true) {
+    if (black == true) {
         e.currentTarget.innerHTML = 'Rainbow';
-        black_color = false;
-        curr_color = inc_color(curr_color);
+        black = false;
+        curr_color = inc_color();
     } else {
         e.currentTarget.innerHTML = 'Black';
-        black_color = true;
+        black = true;
         curr_color = '#000000'
     }
 });
