@@ -1,6 +1,7 @@
 :root {
     --primary-dark: #333;
     --primary-grey: lightgray;
+    --background-grey: ##ededed;
 }
 
 body {
@@ -8,13 +9,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--background-grey);
 }
 
 /* Header */ 
 .header {
     display: flex;
     justify-content: center;
-    background-color: var(--primary-grey);
+    /* background-color: var(--primary-grey); */
 }
 
 /* Main */
@@ -34,8 +36,9 @@ body {
 }
 
 .cube {
-    border: 0.01px solid lightgray;
+    /* border: 0.01px solid lightgray; */
     transition: all 0.1s ease;
+    user-select: none;
 }
 
 /* .grid-item:hover {
@@ -51,7 +54,7 @@ body {
     justify-content: center; 
     align-items: center;
     max-height: 8vh;
-    background-color: var(--primary-grey);
+    /* background-color: var(--primary-grey); */
     gap: 20px;
     padding: 10px;
 }
