@@ -2,12 +2,25 @@
 
 Implementation of the Etch-A-Sketch project from The Odin Project [curriculum](https://www.theodinproject.com/)
 
-Goal: Create a browser version of something between a sketchpad and an Etch-A-Sketch
+[Live Demo](http://gavinslim.com/odin-etch-a-sketch/) :point_left:
 
-Requirements: 
-1. Webpage with 16x16 grid of square divs
-2. Set up "hover" effect so grid divs change color when mouse passes over, leaving a pixelated trail through your grid like a pen would
-3. Add button on top of screen which will clear the current grid and send user popup asking for number of squares per side for the new grid
-- New grid should be generated in the same total space as before so that user gets a new sketch pad. 
-4. (Optional) Instead of changing the color of square from black to white, include a random RGB value 
+**Features:**
+- Webpage with 16x16 grid of square divs
+- Grid divs change color when passed over, leaving a pixelated trail through your grid like a pen would
+- User is able to reset the grid to a blank slate
+- User is able to select a specific color
+- User is able to change the resolution of the grid
 
+---
+
+**Rainbow and black color**
+
+![Rainbow gif](image/demo_rainbow.gif)
+
+**Changing grid resolution**
+
+![Rainbow gif](image/demo_sizing.gif)
+
+**Color selection palette**
+
+![Rainbow gif](image/demo_palette.gif)
