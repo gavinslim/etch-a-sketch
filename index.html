@@ -17,19 +17,24 @@
     </div>
 
     <div class="main">
-        <select name="size" id="size" onChange="update()">
-            <option value="10" >10</option>
-            <option value="20"selected>20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="80">80</option>
-        </select>
+        <div class="sidebar">
+            <!-- <select name="size" id="size" onChange="update()">
+                <option value="10" >10</option>
+                <option value="20"selected>20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="80">80</option>
+            </select> -->
 
-        <button id="color-toggle">Black</button>
-        <button id="reset">Reset</button>
+            <div class="slide-container">
+                <div id="display"></div>
+                <input type="range" min="10" max="100" value="50" step="10" class="slider" id="cube_range" onChange="update()">
+            </div>
 
-        <div class="grid-container">
+            <button id="color-toggle">Black</button>
+            <button id="reset">Reset</button>
         </div>
+        <div class="grid-container"></div>
     </div>
 
     <div class="footer">

@@ -1,14 +1,16 @@
 :root {
     --primary-dark: #333;
-    --primary-grey: lightgray;
-    --background-grey: ##ededed;
+    /* --primary-grey: lightgray; */
+    --background-grey: #ededed;
 }
 
 body {
     font-family: Courier New, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: stretch;
+    margin: 0;
+    min-height: 100vh;
     background-color: var(--background-grey);
 }
 
@@ -16,7 +18,10 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    /* background-color: var(--primary-grey); */
+    align-items: center;
+    font-size: x-large;
+    margin: 0;
+    flex: 1 1;
 }
 
 /* Main */
@@ -24,9 +29,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    gap: 20px;
+    flex: 1 1;
+}
+
+.sidebar {
+    display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.slide {
+    appearance: none;
+    width: 100%;
 }
 
 .grid-container {
@@ -36,27 +56,20 @@ body {
 }
 
 .cube {
-    /* border: 0.01px solid lightgray; */
     transition: all 0.1s ease;
     user-select: none;
 }
 
-/* .grid-item:hover {
-    background-color: darkgrey;
-} */
-
-
-
 /* Footer */
 .footer {
     display: flex;
-    flex: 1;
     justify-content: center; 
     align-items: center;
     max-height: 8vh;
-    /* background-color: var(--primary-grey); */
+    background-color: var(--primary-grey);
     gap: 20px;
-    padding: 10px;
+    margin: 0;
+    flex: 1 0;
 }
 
 .fa-github {

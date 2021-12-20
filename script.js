@@ -55,8 +55,19 @@ function mouse_up() {
 }
 
 function update() {
-    var select = document.getElementById('size');
-    num_cubes = select.options[select.selectedIndex].value;
+    // var select = document.getElementById('size');
+    // num_cubes = select.options[select.selectedIndex].value;
+
+    // Slider range
+    var slider = document.getElementById('cube_range');
+    var display = document.getElementById('display');
+    display.innerHTML = slider.value + "x" + slider.value; 
+    num_cubes = slider.value;
+
+    slider.oninput = function() {
+        display.innerHTML = this.value + "x" + this.value;
+        num_cubes = this.value;
+    }
 
     // Remove existing grid
     const parent = document.getElementsByClassName('grid-container')[0];
