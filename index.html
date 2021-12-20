@@ -18,9 +18,10 @@
 
     <div class="main">
         <div class="sidebar">
+            <div class="palette"></div>
             <div class="slide-container">
+                <input type="range" min="10" max="80" value="20" step="10" class="slider" id="cube_range" onChange="update()">            
                 <div id="display"></div>
-                <input type="range" min="10" max="80" value="40" step="10" class="slider" id="cube_range" onChange="update()">            
             </div>
             <button id="color-toggle">Black Mode</button>
             <button id="reset">Reset</button>
