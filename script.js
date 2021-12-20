@@ -1,6 +1,6 @@
 const max_size = 640;
 var num_cubes;
-var curr_color = '#000000';
+var curr_color = '#333';
 let started = false;
 let black = true;
 
@@ -108,13 +108,13 @@ retry.addEventListener('click', update, false);
 const color = document.getElementById('color-toggle');
 color.addEventListener('click', e => {
     if (black == true) {
-        e.currentTarget.innerHTML = 'Rainbow';
+        e.currentTarget.innerHTML = 'Rainbow Mode';
         black = false;
         curr_color = inc_color();
     } else {
-        e.currentTarget.innerHTML = 'Black';
+        e.currentTarget.innerHTML = 'Black Mode';
         black = true;
-        curr_color = '#000000'
+        curr_color = '#333'
     }
 });
 
