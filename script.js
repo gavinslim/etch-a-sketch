@@ -19,18 +19,14 @@ const inc_color = () => {
 // Initiate drawing when mouse pressed
 function mouse_click() {
     started = true;
-    if (black == false) {
-        curr_color = inc_color(curr_color);
-    } 
+    if (black == false) {curr_color = inc_color(curr_color);} 
     this.style.setProperty('background-color', curr_color);
 }
 
 // Change background color of cube
 function mouse_move(e) {
     if (started) {
-        if (black == false) {
-            curr_color = inc_color(curr_color);
-        }
+        if (black == false) {curr_color = inc_color(curr_color);}
         this.style.setProperty('background-color', curr_color);
     }
 }
