@@ -24,3 +24,8 @@ Implementation of the Etch-A-Sketch project from The Odin Project [curriculum](h
 **Color selection palette**
 
 ![Rainbow gif](image/demo_palette.gif)
+
+**Things I learned**
+- Generating a dynamic grid based on user input
+- Creating multiple buttons within a grid
+- Slider initialization
